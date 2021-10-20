@@ -64,7 +64,7 @@ class ISelenium(unittest.TestCase):
         time.sleep(5)
         assert f'百度一下' in self.driver.title
 
-        elem = self.driver.find_element_by_name("wd")
+        elem = self.driver.find_element_by_id('kw')
         elem.send_keys(f'{search_keyword}{Keys.RETURN}')
         print(f'搜索关键词~{search_keyword}')
         time.sleep(5)
